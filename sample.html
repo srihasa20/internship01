@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+
+<p>This example calls a function which performs a calculation, and returns the result:</p>
+
+<p id="demo1"></p>
+<h2>JavaScript Array Sort, Reverse</h2>
+
+<p>The sort() and reverse() method sorts and reverses the elements in an array.</p>
+
+<p id="demo2"></p>
+<p id="demo3"></p>
+
+<h2>JavaScript Map Objects</h2>
+<p>Creating a Map from an Array:</p>
+<p id="demo4"></p>
+<h2>JavaScript String Methods</h2>
+<p>Search a string for "Hasa", and display the position of the match:</p>
+<p id="demo5"></p>
+<h2>JavaScript Error Handling</h2>
+<p>How to use <b>catch</b> to display an error.</p>
+<p id="demo6"></p>
+<h2>With "use strict":</h2>
+<h3>Without declaring variable will shows error and it is not allowed.</h3>
+
+
+<script>
+function myFunction(a, b, c) {
+  return a * b + c;
+}
+document.getElementById("demo1").innerHTML = myFunction(100, 60, 4);
+
+const cricket = ["Virat", "Dhoni", "SKY", "S.Gill"];
+cricket.sort();
+document.getElementById("demo2").innerHTML = cricket;
+cricket.reverse();
+document.getElementById("demo3").innerHTML = cricket;
+
+
+// Create a Map
+const runs = new Map([
+  ["Virat", 180],
+  ["Dhoni", 180],
+  ["SKY", 99],
+  ["S.GILL", 100],
+]);
+
+document.getElementById("demo4").innerHTML = runs.get("Dhoni");
+let text = "Sri Hasa!"; 
+let n = text.search("Hasa");
+document.getElementById("demo5").innerHTML = n;
+
+try {
+  adddlert("Welcome to my web page!");
+}
+catch(err) {
+  document.getElementById("demo6").innerHTML = err.message;
+}
+/*finally
+{
+    
+    document.getElementById("SRIHASA");
+ 
+}*/
+
+
+"use strict";
+x = 7.18;  // This will cause an error (x is not defined),(by pressing f12, it shows No definition found.
+
+</script>
+</body>
+</html>
